@@ -40,3 +40,12 @@ stages:
         y: predicted
     - output/test/samples_of_mispredicted_images/:
         cache: false
+artifacts:
+  cnn-classifier: 
+    path: s3://models/cnn-classifier.pt
+    type: model
+    desc: 'CNN'
+    labels:
+      - fashion-mnist
+      - classification
+      - cnn
